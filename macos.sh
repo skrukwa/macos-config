@@ -123,7 +123,7 @@ sudo scutil --set LocalHostName skrukwa-mba
 ###############################################################################################
 
 # disable shake mouse pointer to locate
-defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool false ### DID NOT WORK ON SEQUOIA
+defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool true
 
 ###############################################################################################
 # APPEARANCE                                                                                  #
