@@ -9,11 +9,11 @@
 #
 # - display resolution to more space
 # - set wallpaper from ~/wallpaper.png
-# - dock to finder, chrome, messages, mail, photos, calendar, reminders, notes, 
+# - dock to finder, chrome, messages, mail, photos, calendar, reminders, notes
 # - keyboard modifier keys
 # - siri keyboard shortcut to option space
 # - finder favorites to home, applications, desktop, icloud drive, downloads
-# - finder toolbar to create folder, get info, delete, space, search
+# - finder toolbar to new folder, get info, delete, space, search
 # - mail favorites removed
 # - notes diable group by date for each folder
 # - widgets to weather, calendar, stocks
@@ -36,7 +36,7 @@
 # close any open system preferences windows
 osascript -e 'tell application "System Preferences" to quit'
 
-# gain admin upfront
+# acquire admin upfront
 sudo -v
 
 # keep admin alive
