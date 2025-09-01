@@ -2,7 +2,7 @@
 
 # PRE CHECKLIST
 #
-# - ensure ssh backup in icloud drive with name "ssh [mon-dd-yy]" containing key pair and config
+# - ensure ssh backup in icloud drive containing key pair and config
 # - save desktop and downloads contents
 
 # TODO
