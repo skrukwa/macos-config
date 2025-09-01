@@ -108,7 +108,7 @@ killall Finder
 ###############################################################################################
 
 # disable play sound on startup
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume=" " ### DID NOT WORK ON SEQUOIA
 
 ###############################################################################################
 # GENERAL                                                                                     #
@@ -122,14 +122,14 @@ sudo scutil --set LocalHostName skrukwa-mba
 ###############################################################################################
 
 # disable shake mouse pointer to locate
-defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool false
+defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool false ### DID NOT WORK ON SEQUOIA
 
 ###############################################################################################
 # APPEARANCE                                                                                  #
 ###############################################################################################
 
 # disabling wallpaper tinting
-defaults write com.apple.finder ProhibitWallpaperTinting -bool true
+defaults write com.apple.finder ProhibitWallpaperTinting -bool true ### DID NOT WORK ON SEQUOIA
 
 ###############################################################################################
 # CONTROL CENTER                                                                              #
@@ -168,7 +168,7 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 
 # click wallpaper to reveal desktop only in stage manager
-defaults write com.apple.WindowManager StandardClickToShowDesktopMode -int 1
+defaults write com.apple.WindowManager StandardClickToShowDesktopMode -int 1 ### DID NOT WORK ON SEQUOIA
 
 # disable tiled windows have margins
 defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
@@ -195,8 +195,8 @@ sudo pmset -b displaysleep 5
 sudo pmset -c displaysleep 10
 
 # require password after screen saver begins or display is turned off immediately
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPassword -int 1 ### DID NOT WORK ON SEQUOIA
+defaults write com.apple.screensaver askForPasswordDelay -int 0 ### DID NOT WORK ON SEQUOIA
 
 ###############################################################################################
 # TRACKPAD                                                                                    #
@@ -210,7 +210,7 @@ defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad ActuationStrength -int 0
 
 # enable tap to click
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true ### DID NOT UPDATE SEQUOIA SETTINGS (but worked) (possibly because it did not update secondary click to click or tap?)
 
 # disable natural scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
