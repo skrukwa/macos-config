@@ -130,7 +130,7 @@ defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool false #
 ###############################################################################################
 
 # disabling wallpaper tinting
-defaults write com.apple.finder ProhibitWallpaperTinting -bool true ### DID NOT WORK ON SEQUOIA
+defaults write -g AppleReduceDesktopTinting -bool true
 
 ###############################################################################################
 # CONTROL CENTER                                                                              #
