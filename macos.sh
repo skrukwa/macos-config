@@ -18,6 +18,7 @@
 # - notes diable group by date for each folder
 # - widgets to weather, calendar, stocks
 # - copy ssh backup and ssh-add to authentication agent
+# - set up global git ssh signing
 
 # BTT CONFIG
 #
