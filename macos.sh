@@ -19,6 +19,7 @@
 # - widgets to weather, calendar, stocks
 # - copy ssh backup and ssh-add to authentication agent
 # - set up global git ssh signing
+# - change alert volume to 50%
 
 # BTT CONFIG
 #
