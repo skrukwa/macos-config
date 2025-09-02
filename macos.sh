@@ -2,8 +2,9 @@
 
 # PRE CHECKLIST
 #
-# - ensure ssh backup in icloud drive containing key pair and config
-# - save desktop and downloads contents
+# - save ssh backup in icloud drive containing key pair and config
+# - save desktop contents
+# - save downloads contents
 
 # TODO
 #
@@ -17,16 +18,13 @@
 # - mail favorites removed
 # - notes diable group by date for each folder
 # - widgets to weather, calendar, stocks
-# - copy ssh backup and ssh-add to authentication agent
-# - set up global git ssh signing
-# - change alert volume to 50%
 
 # BTT CONFIG
 #
 # - import license from icloud drive
 #
 # - F11 execute terminal command async
-#   osascript -e "set Volume 3.5" && afplay /System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/Resources/volume.aiff
+#   osascript -e "set volume 3.5" && afplay /System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/Resources/volume.aiff
 #
 # - F12 clipboard manager with java script transformer "Visible ASCII" (32 – 126 and newlines)
 #   async clipboardContentString => clipboardContentString.replace(/[^\x20-\x7E\n]/g, "")
@@ -54,8 +52,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install --cask google-chrome
 brew install --cask visual-studio-code
 brew install --cask iina
-softwareupdate --install-rosetta --agree-to-license
-brew install --cask folx
+softwareupdate --install-rosetta --agree-to-license && brew install --cask folx
 # clion <= 2023 for teach.cs ?
 # office
 
@@ -80,6 +77,19 @@ EOF
 cat >> ~/.bashrc << 'EOF'
 PS1="\e[0;33m[\u@\h \W]\$\e[m "
 EOF
+
+# copy ssh backup from icloud drive
+cp -r "/Users/skrukwa/Library/Mobile Documents/com~apple~CloudDocs/ssh "*"-"*"-"* "$HOME/.ssh1"
+
+# add ssh key to auth agent
+ssh-add
+
+# set up git
+git config --global user.name "Evan Skrukwa"
+git config --global user.email "evanskr135@icloud.com"
+git config --global user.signingkey "$HOME/.ssh/id_ed25519.pub"
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
 
 ###############################################################################################
 # FINDER                                                                                      #
@@ -107,6 +117,9 @@ killall Finder
 ###############################################################################################
 # SOUND                                                                                       #
 ###############################################################################################
+
+# set alert volume
+osascript -e "set volume alert volume 50"
 
 # disable play sound on startup
 sudo nvram SystemAudioVolume=" " ### DID NOT WORK ON SEQUOIA
