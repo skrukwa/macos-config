@@ -29,6 +29,7 @@
 # - F12 clipboard manager with java script transformer "Visible ASCII" (32 – 126 and newlines)
 #   async clipboardContentString => clipboardContentString.replace(/[^\x20-\x7E\n]/g, "")
 #
+# - disable window snapping
 # - enable launch btt on startup
 # - disable automatic update checking
 
