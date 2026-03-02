@@ -18,6 +18,7 @@
 # - mail favorites removed
 # - notes diable group by date for each folder
 # - widgets to weather, calendar, stocks
+# - system settings > keyboard > input souces edit > disable "Add period with double-space"
 
 # BTT CONFIG
 #
